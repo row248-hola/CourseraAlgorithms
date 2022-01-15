@@ -7,6 +7,11 @@ func readInt(reader *bufio.Reader) int {
 	return result
 }
 
+func readString(reader *bufio.Reader) string {
+	str, _ := reader.ReadString('\n')
+	return str
+}
+
 func readInts(reader *bufio.Reader) []int {
 	str, _ := reader.ReadString('\n')
 	args := strings.Split(strings.TrimSpace(str), " ")
